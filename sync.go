@@ -18,6 +18,7 @@ import (
 
 const (
 	soccerLivescoreFirestoreID = "48lNVsFhqOWufeFzZBba"
+	livescoreURL              = "https://api.sportmonks.com/v3/football/livescores?include=participants;scores;venue;lineups.player;statistics;referees.referee;state;periods&filters=fixturerefereeTypes:6"
 )
 
 func init() {
@@ -41,7 +42,7 @@ func sync(ctx context.Context, e event.Event) error {
 	}
 	defer firestoreClient.Close()
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://api.sportmonks.com/v3/football/livescores", http.NoBody)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, livescoreURL, http.NoBody)
 	if err != nil {
 		logger.Printf("failed to create request: %v", err)
 		return err
