@@ -9,8 +9,8 @@ deploy:
 	--project=$(PROJECT_ID) \
 	--trigger-topic=$(PUBSUB_TOPIC) \
 	--gen2 \
-	--runtime=go122 \
-	--timeout=30s \
+	--runtime=go123 \
+	--timeout=15s \
 	--max-instances=1 \
 	--memory=128Mi \
 	--entry-point=Sync \
@@ -22,7 +22,7 @@ deploy_scheduler:
 	--project=$(PROJECT_ID) \
 	--schedule="every 1 minutes" \
 	--time-zone="UTC" \
-	--topic="livescore-scheduler" \
+	--topic=$(PUBSUB_TOPIC) \
 	--message-body="{}"
 
 deploy_pubsub:
