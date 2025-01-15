@@ -18,7 +18,7 @@ import (
 
 const (
 	soccerLivescoreFirestoreID = "48lNVsFhqOWufeFzZBba"
-	livescoreURL              = "https://api.sportmonks.com/v3/football/livescores?include=participants;scores;venue;lineups.player;statistics;referees.referee;state;periods&filters=fixturerefereeTypes:6"
+	livescoreURL              = "https://api.sportmonks.com/v3/football/livescores?include=events.type;participants;scores;venue;lineups.player;statistics;referees.referee;state;periods&filters=fixturerefereeTypes:6"
 )
 
 func init() {
