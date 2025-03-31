@@ -1,7 +1,7 @@
 module github.com/klipach/matchguru
 
 go 1.22.7
-toolchain go1.23.4
+toolchain go1.24.1
 
 require (
 	cloud.google.com/go/compute/metadata v0.6.0
@@ -17,7 +17,7 @@ require (
 	cloud.google.com/go/auth/oauth2adapt v0.2.7 // indirect
 	cloud.google.com/go/firestore v1.18.0
 	cloud.google.com/go/longrunning v0.6.4 // indirect
-	github.com/GoogleCloudPlatform/functions-framework-go v1.9.1
+	github.com/GoogleCloudPlatform/functions-framework-go v1.9.2
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
