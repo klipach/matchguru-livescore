@@ -6,7 +6,7 @@ toolchain go1.24.1
 require (
 	cloud.google.com/go/compute/metadata v0.6.0
 	cloud.google.com/go/logging v1.13.0
-	github.com/cloudevents/sdk-go/v2 v2.15.2
+	github.com/cloudevents/sdk-go/v2 v2.16.0
 )
 
 require go.opentelemetry.io/auto/sdk v1.1.0 // indirect
