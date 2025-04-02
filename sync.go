@@ -66,7 +66,7 @@ func sync(ctx context.Context, e event.Event) error {
 		return errors.New("unexpected status code")
 	}
 
-	soccerLivescoreData := map[string]interface{}{}
+	soccerLivescoreData := map[string]any{}
 	if err := json.NewDecoder(resp.Body).Decode(&soccerLivescoreData); err != nil {
 		logger.Printf("error while decoding request: %v", err)
 		return err
@@ -74,12 +74,12 @@ func sync(ctx context.Context, e event.Event) error {
 
 	if _, ok := soccerLivescoreData["data"]; !ok {
 		logger.Printf("no livescore data found in response")
-		soccerLivescoreData = map[string]interface{}{
-			"data": []interface{}{},
+		soccerLivescoreData = map[string]any{
+			"data": []any{},
 		}
 	} else {
 		// only keep the data field
-		soccerLivescoreData = map[string]interface{}{
+		soccerLivescoreData = map[string]any{
 			"data": soccerLivescoreData["data"],
 		}
 	}

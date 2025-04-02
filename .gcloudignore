@@ -1,8 +1,11 @@
 .gcloudignore
 .git
+.github
 .gitignore
+.idea
 .vscode
 Makefile
 readme.md
-
 *.rest
+*_test.go
+.DS_Store
